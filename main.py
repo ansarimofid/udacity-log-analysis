@@ -37,15 +37,15 @@ def print_res(ques, res, suff='views'):
     print('\n')  # Print Result
 
 
-# Query 1
+# Query 1 Execution
 res1 = execute_query(conn, queries[0])
 print_res(ques[0], res1)
 
-# Query 2
+# Query 2 Execution
 res1 = execute_query(conn, queries[1])
 print_res(ques[1], res1)
 
-# Query 3
+# Query 3 Execution
 res1 = execute_query(conn, queries[2])
 print_res(ques[2], res1)
 

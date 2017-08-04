@@ -14,7 +14,7 @@ The database consist of three table
 
 ##Running
 #### Step 1
-* make sure you have ```newdata.sql``` in the same folder
+* make sure you have ```newsdata.sql``` in the same folder
 #### Step 2
 * Add data to database, you must create news database name 'news' before executing command
 

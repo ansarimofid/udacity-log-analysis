@@ -1,11 +1,12 @@
 import psycopg2
-from queries_ques import queries,ques #import ques and queries data
+from queries_ques import queries, ques  # import ques and queries data
 
 # Creates Connection
-conn = psycopg2.connect(database="news", user = "postgres", password = "fell2rise", host = "127.0.0.1", port = "5432")
+conn = psycopg2.connect(database="news", user="postgres", password="fell2rise", host="127.0.0.1", port="5432")
 print ("Opened database successfully\n\n")
 
-def execute_query(conn1,query):
+
+def execute_query(conn1, query):
     """Executes Database Query
 
         Args:
@@ -18,7 +19,8 @@ def execute_query(conn1,query):
     rows = cur.fetchall()
     return rows
 
-def print_res(ques,res,suff='views'):
+
+def print_res(ques, res, suff='views'):
     """Print Formatted Output
 
             Args:
@@ -27,11 +29,11 @@ def print_res(ques,res,suff='views'):
                 suff()string:suffix for output
             And so on...
         """
-    print(ques) # Print Question
+    print(ques)  # Print Question
 
     for i in range(len(res)):
-        print("\t{0}. {1} -- {2} {3}".format(i+1,res[i][0],res[i][1],suff))
-    print('\n') # Print Result
+        print("\t{0}. {1} -- {2} {3}".format(i + 1, res[i][0], res[i][1], suff))
+    print('\n')  # Print Result
 
 
 # Query 1
@@ -46,4 +48,5 @@ print_res(ques[1], res1)
 res1 = execute_query(conn, queries[2])
 print_res(ques[2], res1)
 
+# Close Connction
 conn.close()

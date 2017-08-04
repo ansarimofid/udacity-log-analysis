@@ -21,16 +21,16 @@ def execute_query(conn1, query):
     return rows
 
 
-def print_res(ques, res, suff='views'):
+def print_res(ques_l, res, suff='views'):
     """Print Formatted Output
 
             Args:
-                ques(string): Question
-                res(object):Query result Object
+                ques_l(string): Question
+                res(list):Query result Object
                 suff()string:suffix for output
             And so on...
         """
-    print(ques)  # Print Question
+    print(ques_l)  # Print Question
 
     for i in range(len(res)):
         print("\t{0}. {1} -- {2} {3}".format(i + 1, res[i][0], res[i][1], suff))

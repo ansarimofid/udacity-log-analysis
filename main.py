@@ -1,3 +1,4 @@
+#!/usr/bin/env python2
 import psycopg2
 from queries_ques import queries, ques  # import ques and queries data
 
